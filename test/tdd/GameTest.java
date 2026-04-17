@@ -42,5 +42,15 @@ class GameTest {
 		assertEquals(game.score(),30);
 	}
 	
+	@Test
+	void test5() {
+		game.roll(7);
+		game.roll(3);
+		game.roll(4);
+		for(int i=0; i<17; i++)
+			game.roll(0);
+		assertEquals(game.score(),18);
+	}
+	
 
 }
